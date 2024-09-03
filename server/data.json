@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Keyboard from server",
+      "price": "100",
+      "quantity": "50",
+      "rating": 4
+    },
+    {
+      "id": "2",
+      "name": "Laptop From Server",
+      "price": "1500",
+      "quantity": "15",
+      "rating": 3
+    },
+    {
+      "id": "3",
+      "name": "Phone From Server",
+      "price": 1200,
+      "quantity": 20,
+      "rating": 5
+    },
+    {
+      "id": "4",
+      "name": "Headphone From Server",
+      "price": 100,
+      "quantity": 45,
+      "rating": 2
+    },
+    {
+      "id": "5",
+      "name": "Cable from server",
+      "price": 20,
+      "quantity": 53,
+      "rating": 1
+    }
+  ]
+}
