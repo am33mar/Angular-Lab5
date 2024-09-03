@@ -1,0 +1,57 @@
+<div class="mt-5 text-center">
+  <h1 class="text-gray-600 text-3xl font-semibold">Explore our products</h1>
+  <div class="container mx-auto mt-6">
+    <table class="w-[80%] mx-auto bg-white border border-gray-200 rounded-lg shadow-lg">
+      <thead>
+        <tr class="bg-gray-200 text-center">
+          <th scope="col" class="px-4 py-2 text-gray-600 font-medium">ID</th>
+          <th scope="col" class="px-4 py-2 text-gray-600 font-medium">Name</th>
+          <th scope="col" class="px-4 py-2 text-gray-600 font-medium">Price</th>
+          <th scope="col" class="px-4 py-2 text-gray-600 font-medium">Quantity</th>
+          <th scope="col" class="px-4 py-2 text-gray-600 font-medium">Rating</th> <!-- New column header -->
+          <th scope="col" class="px-4 py-2 text-gray-600 font-medium">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (product of products; track product.id) {
+        <tr class="border-t border-gray-200 text-center">
+          <th scope="row" class="px-4 py-2 text-gray-700">{{ product.id }}</th>
+          <td class="px-4 py-2 text-gray-700">{{ product.name }}</td>
+          <td class="px-4 py-2 text-gray-700">{{ product.price | currency }}</td>
+          <td class="px-4 py-2 text-gray-700">{{ product.quantity }}</td>
+          <td class="px-4 py-2 text-gray-700"> <!-- New cell for rating -->
+            <div class="flex justify-center items-center">
+              <span class="text-yellow-400 text-xl">
+                <!-- Display stars based on rating -->
+                <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+                  <i [ngClass]="{'bi-star-fill': i < (product.rating || 0), 'bi-star': i >= (product.rating || 0)}" class="bi"></i>
+                </ng-container>
+              </span>
+            </div>
+          </td>
+          <td class="px-4 py-2 flex justify-center gap-4">
+            <button
+              [routerLink]="['/products', product.id]"
+              class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              View
+            </button>
+            <button
+              [routerLink]="['/products', product.id, 'edit']"
+              class="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            >
+              Edit
+            </button>
+            <button
+              (click)="deleteHandler(product.id)"
+              class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

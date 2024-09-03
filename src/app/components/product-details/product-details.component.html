@@ -1,0 +1,22 @@
+<div class="bg-gray-900 text-white p-8 h-[91vh]">
+  <div class="container mx-auto max-w-4xl">
+    <h1 class="text-4xl font-bold mb-6">Product Details</h1>
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+      <p class="text-xl mb-3"><span class="font-semibold">Product Id:</span> {{ product?.id }}</p>
+      <p class="text-xl mb-3"><span class="font-semibold">Product Name:</span> {{ product?.name }}</p>
+      <p class="text-xl mb-3"><span class="font-semibold">Product Price:</span> {{ product?.price | currency }}</p>
+      <p class="text-xl mb-3"><span class="font-semibold">Product Quantity:</span> {{ product?.quantity }}</p>
+      <div class="flex items-center mb-6">
+        <span class="text-yellow-400 text-xl">
+          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+            <i [ngClass]="{'bi-star-fill': i < (product?.rating || 0), 'bi-star': i >= (product?.rating || 0)}" class="bi"></i>
+          </ng-container>
+        </span>
+      </div>
+      <a [routerLink]="['/products']"
+        class="inline-block bg-blue-500 text-white hover:bg-blue-600 px-6 py-3 rounded-lg font-semibold shadow-lg transition-colors duration-300">
+        Back to Products
+      </a>
+    </div>
+  </div>
+</div>

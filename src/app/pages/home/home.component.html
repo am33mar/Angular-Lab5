@@ -1,0 +1,88 @@
+<!-- main section -->
+<!-- Hero Section -->
+<div class="bg-blue-500 text-white relative overflow-hidden" style="height: 80vh;">
+  <div class="absolute inset-0 bg-blue-400 opacity-50"></div>
+  <div class="relative z-10 max-w-screen-lg mx-auto flex flex-col justify-center items-center h-full text-center px-4">
+    <h1 class="text-5xl font-extrabold mb-4 leading-tight">Explore the Future of Technology</h1>
+    <p class="text-lg mb-6">
+      Discover the latest innovations in electronics. Whether you're looking for high-performance laptops, immersive
+      headphones, or essential accessories, we have everything to enhance your tech experience. Dive into our extensive
+      range and find the perfect tech to suit your needs.
+    </p>
+    <button [routerLink]="['/products']"
+      class="bg-gray-100 hover:bg-gray-300  text-blue-500 px-12 py-3 rounded-lg font-semibold shadow-lg ">
+      Browse Products
+  </button>
+    <!-- Optional: Add a secondary call-to-action or feature -->
+    <div class="mt-8">
+      <h2 class="text-2xl font-semibold mb-2">Why Choose Us?</h2>
+      <p class="text-lg text-gray-200">
+        We offer top-notch products, competitive pricing, and exceptional customer service. Explore our selection and
+        experience technology like never before.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- products categories -->
+<div class="bg-gray-100 py-12">
+  <div class="max-w-screen-lg mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-8">Product Categories</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold h-[60px] mb-2">Laptops</h3>
+          <p class="text-gray-600 mb-4">
+            Explore our wide range of laptops designed for productivity and entertainment. Find the perfect model to
+            suit
+            your needs.
+          </p>
+        </div>
+        <button [routerLink]="['/products']"
+          class="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          See More
+        </button>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2 h-[60px]">Headphones</h3>
+          <p class="text-gray-600 mb-4">
+            Enjoy superior sound quality with our selection of headphones. From noise-cancelling to high-fidelity audio,
+            we have it all.
+          </p>
+        </div>
+        <button [routerLink]="['/products']"
+          class="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          See More
+        </button>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2 h-[60px]">Keyboards & Mouses</h3>
+          <p class="text-gray-600 mb-4">
+            Enhance your typing and navigation with our range of keyboards and mouses. Find the perfect peripherals for
+            your setup.
+          </p>
+        </div>
+        <button [routerLink]="['/products']"
+          class="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          See More
+        </button>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2 h-[60px]">Cables & Accessories</h3>
+          <p class="text-gray-600 mb-4">
+            Get all the cables and accessories you need to complete your tech setup. From USB cables to docking
+            stations,
+            find it here.
+          </p>
+        </div>
+        <button [routerLink]="['/products']"
+          class="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          See More
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
